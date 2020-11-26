@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtSignIn"
+                android:textStyle="bold"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/setyourstorelocation"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+         <!--       <fragment
+                    android:id="@+id/place_autocomplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="com.google.android.gms.location.places.ui.SupportPlaceAutocompleteFragment"
+                    />-->
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <fragment
+            android:layout_centerInParent="true"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400sdp"
+            tools:context=".Ui.MapsActivity" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:background="@drawable/edit_text_shape"
+                android:layout_weight="1"
+                android:id="@+id/etdescription"
+                android:hint="@string/enter_location"
+                android:padding="@dimen/_10sdp"
+                android:layout_margin="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"/>
+            <Button
+                android:id="@+id/btnSaveLocation"
+                android:layout_margin="@dimen/_3sdp"
+                android:textStyle="bold"
+                android:padding="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:text="@string/ok"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"/>
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

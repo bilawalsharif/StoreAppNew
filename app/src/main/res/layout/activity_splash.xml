@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_app_name_label"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="70dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_about"
+        android:visibility="gone"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="60dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_app_name_label"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_60sdp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="@dimen/_70sdp"-->
+<!--        android:background="@color/colorPrimaryDark"-->
+<!--        android:gravity="center"-->
+<!--        android:text="@string/app_name"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="@dimen/_24sdp" />-->
+</RelativeLayout>

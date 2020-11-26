@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">StoreApp</string>
+    <string name="wellcome">WellCome!<br />sVerify to Continue</string>
+    <string name="verify_no">Sent a verfication code to verify your mobile number</string>
+    <string name="not_receive_otp">Didn\'t receive code?</string>
+    <string name="verify">Verify</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="profile">Profile</string>
+    <string name="select_category">Select Category</string>
+    <string name="add_item">Add Item</string>
+    <string name="my_order">My Orders</string>
+    <string name="dispatch_order">Disptach Order</string>
+    <string name="language">Language</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="history">History</string>
+    <string name="product_code">Product Code</string>
+    <string name="product_name">Product Name <font color="#C62418">*</font></string>
+    <string name="order_status">Order Status</string>
+    <string name="book_delivery">Book Delivery</string>
+    <string name="booking_accepted">Booking Accepted</string>
+    <string name="pick_up_package">Pickup Package</string>
+    <string name="drop_off_package">Drop-off Package</string>
+    <string name="product_type">Product Type</string>
+    <string name="resturant">Resturant</string>
+    <string name="shops">Shops</string>
+    <string name="grociries">Groceries</string>
+    <string name="medics">Medics</string>
+    <string name="active_order">Active Orders</string>
+    <string name="new_order">New Orders</string>
+    <string name="add_new_item">Add New Item</string>
+    <string name="quantiy">Quantity <font color="#C62418">*</font></string>
+    <string name="price">Price <font color="#C62418">*</font></string>
+    <string name="select_option">Select Option</string>
+    <string name="available">Available</string>
+    <string name="out_of_stock">Out of Stock</string>
+    <string name="choose_file">Choose File</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="edit_phto">Edit Photo</string>
+    <string name="call">call</string>
+    <string name="viewmap">View Map</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="log_out">LogOut</string>
+    <string name="select_language">Select Language</string>
+    <string name="english">English</string>
+    <string name="enter_first_name">First Name <font color="#C62418">*</font></string>
+    <string name="enter_old_password">Old Password <font color="#C62418">*</font></string>
+    <string name="email_address">Email Address <font color="#C62418">*</font></string>
+    <string name="enter_password">Enter Password <font color="#C62418">*</font></string>
+    <string name="confirm_password">Confirm Password <font color="#C62418">*</font></string>
+    <string name="enter_cell_no">Enter Cell No <font color="#C62418">*</font></string>
+    <string name="last_name">Last Name</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="verif_email_address">Please Enter 6 digit code below sent via email to Verify your account</string>
+    <string name="did_not_receive_otp">Didn\'t receive the Code?</string>
+    <string name="register_text"> Sign Up</string>
+    <string name="signup">Sign Up</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="or">or</string>
+    <string name="first_time">First time?</string>
+    <string name="alread_have_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="next">Next</string>
+    <array name="languages_array">
+        <item>Prefered Language</item>
+        <item>English</item>
+        <item>French</item>
+        <item>Urdu</item>
+    </array>
+    <array name="store_categories_array">
+        <item>Prefered Category</item>
+        <item>Restaurant</item>
+        <item>Store</item>
+        <item>Shop</item>
+    </array>
+    <string name="title_activity_maps">Map</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setyourstorelocation">Set your Store Location</string>
+    <string name="ok">Ok</string>
+    <string name="upload_photo">upload photo</string>
+    <string name="enter_location">Enter Location</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="description">Description <font color="#C62418">*</font></string>
+    <string name="stock">My Stock</string>
+    <string name="setting">Setting</string>
+    <string name="lbl_take_camera_picture">Open Camera</string>
+    <string name="lbl_choose_from_gallery">Open Gallery</string>
+    <string name="lbl_set_profile_photo">Profile Picture</string>
+    <string name="dialog_permission_title">Permission Required</string>
+    <string name="dialog_permission_message">Permission Required</string>
+    <string name="go_to_settings">Setting</string>
+    <string name="update_product">Update Product</string>
+    <string name="changePassword">Change Password</string>
+    <string name="save">Save</string>
+    <string name="newPassword">New Password <font color="#C62418">*</font></string>
+
+</resources>

@@ -1,0 +1,117 @@
+package com.teacherappqrattendence.Ui;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.teacherappqrattendence.Adapter.ShowAttendenceReportAdapter;
+import com.teacherappqrattendence.R;
+
+import java.util.ArrayList;
+
+public class MonthlyReportActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private Toolbar toolbar;
+    private Context mContext;
+    private ProgressDialog progressDialog;
+    private FirebaseDatabase database;
+    private DatabaseReference myRefStudent, mRefAttendence;
+    private ShowAttendenceReportAdapter attendenceReportAdapter;
+    private ArrayList<AttendenceModel> attendenceModels = new ArrayList<>();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_monthly_report);
+        recyclerView=findViewById(R.id.RecyclerView);
+        recyclerView = findViewById(R.id.RecyclerView);
+        mContext = MonthlyReportActivity.this;
+        database = FirebaseDatabase.getInstance();
+        myRefStudent = database.getReference("Tbl_Student");
+        mRefAttendence = database.getReference("Tbl_Attendence");
+        getAttendenceData();
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Loading Data...");
+        progressDialog.show();
+
+        toolbar = findViewById(R.id.toolbar); // get the reference of Toolbar
+        toolbar.setTitle("Monthly Atendence Report");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+    }
+
+    public void getStudentsData(String studentID, final int pos) {
+        final ArrayList<AttendenceModel> attendenceModelArrayList=new ArrayList<>();
+        myRefStudent.child(studentID).child("studentName").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                     attendenceModels.clear();
+                    progressDialog.dismiss();
+
+                    for (DataSnapshot snap1 : dataSnapshot.getChildren()) {
+                        for (DataSnapshot snap2 : snap1.getChildren()) {
+                            AttendenceModel usersBean = snap2.getValue(AttendenceModel.class);
+                            attendenceModels.add(usersBean);
+                        }
+                    }
+                  /*  String name = String.valueOf(dataSnapshot.getValue());
+                    AttendenceModel model = new AttendenceModel(name);
+                    for (int k=0;k<attendenceModels.size();k++)
+                    {
+                        model.setAttendenceID(attendenceModels.get(k).getAttendenceID());
+                        model.setStudentID(attendenceModels.get(k).getStudentID());
+                        model.setClassName(attendenceModels.get(k).getClassName());
+                        model.setStatus(attendenceModels.get(k).getStatus());
+                        model.setDate(attendenceModels.get(k).getDate());
+                        model.setStudentName(name);
+                        attendenceModelArrayList.add(model);
+                    }*/
+                    if (attendenceModels.size() > 0) {
+                        attendenceReportAdapter = new ShowAttendenceReportAdapter(attendenceModels, mContext);
+                        recyclerView.setAdapter(attendenceReportAdapter);
+                        attendenceReportAdapter.notifyDataSetChanged();
+                    }
+                } else {
+                    progressDialog.dismiss();
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                progressDialog.dismiss();
+                Toast.makeText(mContext, databaseError.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    public void getAttendenceData() {
+
+        mRefAttendence.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    attendenceModels.clear();
+
+                    attendenceModels.clear();
+                    progressDialog.dismiss();
+
+                    for (DataSnapshot snap1 : dataSnapshot.getChildren()) {
+                        for (DataSnapshot snap2 : snap1.getChildren()) {
+                            AttendenceModel usersBean = snap2.getValue(AttendenceModel.class);
+                            attendenceModels.add(usersBe

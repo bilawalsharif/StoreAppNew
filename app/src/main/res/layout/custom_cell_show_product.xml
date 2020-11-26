@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<LinearLayout
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:padding="@dimen/_5sdp"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgViewProduct"
+                android:src="@drawable/student"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtProductName"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:paddingRight="2sp"
+                    android:textStyle="bold"
+                    android:text="product Name"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txtProductType"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:paddingRight="2sp"
+                    android:text="product Type"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txtProductPrice"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:paddingRight="2sp"
+                    android:text="product price"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/txtProductStatus"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="product status"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:paddingRight="2sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
+</LinearLayout>
